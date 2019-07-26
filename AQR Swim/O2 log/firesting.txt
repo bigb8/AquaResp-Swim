@@ -1,0 +1,18 @@
+
+***********	*************	*************	**************	*************	*************	*************	*************	*************	*************	*************	*************	*************	*************
+Data	from	Pyro	Oxygen	Logger	V3.213	with	FireStingO2	(Firmware	3.10)	---	Pyro	Science	---	Device	Name:	
+***********	*************	*************	**************	*************	*************	*************	*************	*************	*************	*************	*************	*************	*************
+Settings:	Description	Units	Basic Mode	Sensor Code	Meas. Mode	Temp. Comp.	Temp. (°C)	Press. Comp.	Press. (hPa)	Salinity (‰)	LED Int. (%)	PD Ampl.	Meas. Time (ms)	Bkdg. Comp.	Fiber Length (m)	
+Ch 1	Robust Oxygen Probe (normal range)	% air sat	ON	XB7-545-203	3	OFF	26.000	OFF	1013	0.000	15%	400x	10	ON fiber length	2.00	
+Temp.	Sensor	Measuring	Time (ms):	300	Offset ('C):	0.000	
+
+Calibration:	Status 0% Cal.	Status upper Cal.	Temp. 0% Cal. (°C)	Temp. upper Cal. (°C)	Press. (hPa)	Humidity (%)	Oxygen (%O2)	dphi0 (°)	dphi100 (°)	f	m	F (Hz)	kt (%/K)	tt (%/K)	Bkgd. Int. (mV)	Bkgd. dphi (°)	mt (1/K)	
+Ch 1	Factory 0% Calibration	Factory Air Calibration	20.000	20.000	1013	0.000	20.950	54.500	20.300	0.804	0.122	4000	0.969	-0.056	0.811	0.000	-0.000303	
+Data	Smoothing:	3	
+Date:	7/29/2017	
+			 	Oxygen				Compensation	Temperature	('C)		Pressure	Humidity	Temp. Probe	Int. Temp.	Analog In	Raw Data:	 dphi (°)			Signal	Intensity	(mV)		Ambient	Light	(mV)		Advanced Raw Values (only logged while raw data window is open)	
+Date	Time (HH:MM:SS)	Time (s)	Comment	Ch1	Ch2	Ch3	Ch4	Ch 1	Ch 2	Ch 3	Ch 4	(mbar)	(%)	('C)	('C)	 (mV)	Ch 1	Ch 2	Ch 3	Ch 4	Ch1	Ch2	Ch3	Ch4	Ch1	Ch2	Ch3	Ch4	 (MainBkgd->MainBkgd->MainPhi->RefAmpl->RefBkgnd->RefPhi)	
+7/29/2017	00:02:11	0.00		89.453	---	---	---	26.000	---	---	---	1008.59	72.750	28.509	28.028	---	21.298	---	---	---	95.847	---	---	---	6.469	---	---	---	
+7/29/2017	00:02:12	1.00		89.403	---	---	---	26.000	---	---	---	1008.60	72.783	28.443	28.028	---	21.304	---	---	---	95.847	---	---	---	6.524	---	---	---	
+7/29/2017	00:02:13	2.00		89.380	---	---	---	26.000	---	---	---	1008.56	72.801	28.557	28.028	---	21.307	---	---	---	95.848	---	---	---	6.521	---	---	---	
+7/29/2017	00:02:14	3.00		89.372	---	---	---	26.000	---	---	---	1008.60	72.824	28.635	28.032	---	21.308	---	---	---	95.860	---	---	---	6.498	---	---	---	

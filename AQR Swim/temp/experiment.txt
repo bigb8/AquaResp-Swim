@@ -1,0 +1,2 @@
+Experiment name;Temperature;Salinity;Flushing time;Wait time;Measurement time;
+Background;26;30;900;300;3600;

@@ -1,0 +1,2 @@
+Slope;Intecept;P value of slope;standard error;R squared;
+11.9470588235;-0.304117647059;3.30727727681e-264;0.0286824537039;0.996709267398;

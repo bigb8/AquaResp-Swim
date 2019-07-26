@@ -1,0 +1,6 @@
+AQUARESP 3 - Swim version  - Data file 
+--------------------------------------------------------------------------------------------------------------------------------
+Experiment start, UNIX time: 1564137917
+Flush time ,s: 
+Wait time, s: 
+Measurement time, s: 
