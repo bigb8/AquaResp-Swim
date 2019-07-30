@@ -171,7 +171,7 @@ def MMC1208Read(bn,ch,ran):
 		# getdllstr = f.readlines()
 	# dllstr = myp + "CBW32.dll"
 	# dllstr = "C:\Program Files (x86)\Measurement Computing\DAQ\cbw32.dll"
-	dllstr = lib + "cbw32.dll"
+	dllstr = lib + "cbw64.dll"
 	# print dllstr
 	USB1208dll = WinDLL(dllstr)
 	# USB1208dll.cbFlashLED(0)
