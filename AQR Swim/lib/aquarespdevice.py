@@ -17,42 +17,49 @@ def DigitalIO(bn,ch,state):
 
 def tail( f,window=1):
 	#Reads only end of text tile 
-	
-    BUFSIZ = 1024
-    f.seek(0, 2)
-    bytes = f.tell()
-    size = window
-    block = -1
-    data = []
-    while size > 0 and bytes > 0:
-        if (bytes - BUFSIZ > 0):
-            # Seek back one whole BUFSIZ
-            f.seek(block*BUFSIZ, 2)
-            # read BUFFER
-            data.append(f.read(BUFSIZ))
-        else:
-            # file too small, start from begining
-            f.seek(0,0)
-            # only read what was not read
-            data.append(f.read(bytes))
-        linesFound = data[-1].count('\n')
-        size -= linesFound
-        bytes -= BUFSIZ
-        block -= 1
-			
-    return '\n'.join(''.join(data).splitlines()[-window:])
+
+	BUFSIZ = 1024
+	f.seek(0, 2)
+	# f.seek(-6, 2)
+	bytes = f.tell()
+	size = window
+	block = -1
+	data = []
+	while size > 0 and bytes > 0:
+		if (bytes - BUFSIZ > 0):
+			# Seek back one whole BUFSIZ
+			f.seek(block*BUFSIZ, 2)
+			# read BUFFER
+			data.append(f.read(BUFSIZ))
+		else:
+			# file too small, start from begining
+			f.seek(0,0)
+			# only read what was not read
+			data.append(f.read(bytes))
+		# print(str(data[-100:-1]).split("\n"))	
+		linesFound = data[-1].count(b'\n')
+		# print(linesFound)
+		size -= linesFound
+		bytes -= BUFSIZ
+		block -= 1
+
+	#print(data[0].decode())
+	return '\n'.join(''.join(data[0].decode()).splitlines()[-window:])
+
+
 	
 def ReadFiresting(fn):
-	with open(fn,'r') as f:
+	with open(fn,'rb') as f:
 		ans =  tail(f)
 		
 	n = 0
+		
 	try:
 		pO2_1 = ans.split("\t")[4+n]
 		pO2_2 = ans.split("\t")[5+n]
 		pO2_3 = ans.split("\t")[6+n]
 		pO2_4 = ans.split("\t")[7+n]
-		# print pO2_1, pO2_2, pO2_3, pO2_4
+	
 		oxtime = ans.split("\t")[1]
 	except IndexError: 
 		print("read error")
@@ -60,9 +67,9 @@ def ReadFiresting(fn):
 		pO2_2= -4
 		pO2_3= -4
 		pO2_4= -4
-		oxtime = -4
-	# print oxtime
-	return float(pO2_1),pO2_2,pO2_3,pO2_4,oxtime
+		oxtime=1
+
+	return pO2_1.replace(",","."),pO2_2.replace(",","."),pO2_3.replace(",","."),pO2_4.replace(",","."),oxtime.replace(",",".")
 	
 def ReadFirestingOld(fn):
 
