@@ -18,7 +18,7 @@ def Conventional(tf,tw,tm):
 	ch1 = 16
 	
 	exp = True	
-	print "Starting experimental cycle"
+	print( "Starting experimental cycle")
 	while exp:	
 
 		Popen(["python", lib + os.sep + "Pump.py","1","0","0","0"])
