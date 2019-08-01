@@ -144,7 +144,7 @@ def flowaverager(Uucs,Ucs,Ubls,Vs):
 	sdUbl = np.std(Ubls)
 	sdVS = np.std(Vs)
 	
-	return (aUuc,aUc,aUbl,aVS),(sdUuc,sdUc,sdUbl,sdVS)
+	return aUuc,aUc,aUbl,aVS,sdUuc,sdUc,sdUbl,sdVS
 	
 	
 	
