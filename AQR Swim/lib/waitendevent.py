@@ -11,5 +11,5 @@ result_p = main + "results" +os.sep
 
 
 ExpName, ft,wt,mt,temperature,salinity, UNIXtime, Dateime = filehandling.GetExperimentInfo()
-print mt
+print(mt)
 # Popen(["python", lib + os.sep +"aquabeep.py", mt])
