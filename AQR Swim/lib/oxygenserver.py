@@ -147,11 +147,13 @@ def MeasurementPeriod(mainpath):
 	slope, intercept, rr, p_value, std_err,avgpo2,medianpo2,minpo2,maxpo2 = aquacalc.sloper(timesec,measurementperiod1)
 	
 	
-	(aUuc,aUc,aUbl,aVS),(sdUuc,sdUc,sdUbl,sdVS) = aquacalc.flowaverager(Uucs[Uucs<999],Ucs[Uucs<999],Ubls[Uucs<999],Vs[Uucs<999])
+	aUuc,aUc,aUbl,aVS,sdUuc,sdUc,sdUbl,sdVS = aquacalc.flowaverager(Uucs[Uucs<999],Ucs[Uucs<999],Ubls[Uucs<999],Vs[Uucs<999])
+	
 	in_hours, in_minutes,in_seconds, in_days = filehandling.GetTimeStartExperiment()
 	
 	with open(temppath + "fish.txt","r") as fe:
 		datatemp = fe.readlines()[1].split(";")
+		
 	animalmass = float(datatemp[0])*1e-3 #kg
 	animalwidth = datatemp[1] # cm
 	animalheight = datatemp[2]
