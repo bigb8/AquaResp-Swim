@@ -155,19 +155,11 @@ class Swimmy(tk.Frame):
 			B3 = tk.Button(mid_frame, text ="Test relay", command = testRelay,bg="SteelBlue3",height =2, width = 30)
 			B3.pack()
 
-
-
-
-
 			B1 = tk.Button(bottom_frame, text ="Save", command = saveRelay,bg="PaleGreen3",height =3, width = 30)
 			B2 = tk.Button(bottom_frame, text ="Close window", command = root.destroy,bg="tomato2")
 
-
-
 			B2.pack(side="bottom",anchor="n")
 			B1.pack(anchor="n",side="bottom")
-
-
 
 			root.wm_title("Flush pump relay configuration - AQ3 Swim")
 			root.geometry('{}x{}'.format(600, 300))
@@ -178,11 +170,9 @@ class Swimmy(tk.Frame):
 			# L3.pack(anchor="e")
 			L3.pack(side="left")
 
-
 			global listbox
 			listbox = tk.Listbox(top_frame)
 			listbox.pack(side="bottom",fill="x")
-
 
 			label2 = tk.Label(mid_frame,text="O2: ")
 			label2.pack(side="left")
@@ -190,14 +180,10 @@ class Swimmy(tk.Frame):
 			for item in ["Flush box 1 channel", "Flush box 4 ch #1", "Flush box 4 ch #2", "Flush box 4 ch #3", "Flush box 4 ch #4", "Loligo LOL-DAQ","MMC USB/PMD 1208LS #ch1"]:
 				listbox.insert(tk.END, item)
 
-			
-			
 			with open(temp + "Relay.txt", "r") as f:	
 				id = f.readlines()[0].split(";")[0]
 				listbox.select_set(int(id))
 				
-		
-		
 		def O2GUI():
 			def saveO2sens():		
 				global listbox
@@ -227,14 +213,8 @@ class Swimmy(tk.Frame):
 			top_frame.pack(side="top", fill="x")
 			mid_frame.pack(side="top", fill="x")
 			bottom_frame.pack(side="top", fill="x")
-
-			# top_frame.pack(side="top", fill="x",expand=False)
-
-
 			B1 = tk.Button(bottom_frame, text ="Save and Check sensor", command = saveO2sens,bg="PaleGreen3",height =3, width = 30)
-
 			B2 = tk.Button(bottom_frame, text ="Close window", command = root.destroy,bg="tomato2")
-
 
 			B2.pack(side="bottom",anchor="n")
 			B1.pack(anchor="n",side="bottom")
@@ -270,14 +250,11 @@ class Swimmy(tk.Frame):
 			
 			def saveflow():
 				global T,T2
-	
-				# print myp
 				Voltage = T2.get("0.0",tk.END)
 				Flow = T.get("0.0",tk.END)
 				Vs = []
 				Us = []
-				# print Voltage,Flow
-				
+								
 				try:
 					with open(temp + "FlowVolRaw.txt","w") as f:
 						f.write("Voltage;Flow;\n")
@@ -335,11 +312,7 @@ class Swimmy(tk.Frame):
 			root = tk.Tk()
 			global T,T2
 
-			
-			
-			# thread = Thread(target = execfile(myp+"guivoltage.py") , args = (10, ))
-			
-			
+						
 			B1 = tk.Button(root, text ="Save information", command = saveflow,bg="PaleGreen3",height =3, width = 30)
 
 			B2 = tk.Button(root, text ="Close window", command = root.destroy,bg="tomato2")
@@ -355,19 +328,14 @@ class Swimmy(tk.Frame):
 			bottom_frame = tk.Frame(root, background="yellow")
 
 
-			# top_frame.pack(side="top", fill="x")
 			top_frame.pack(side="top", fill="x",expand=False)
 			bottom_frame.pack(side="bottom", fill="both", expand=True)
-
-
 			
 			S = tk.Scrollbar(bottom_frame)
 			T = tk.Text(bottom_frame, height=4, width=50)
 
 			S2 = tk.Scrollbar(bottom_frame)
 			T2 = tk.Text(bottom_frame, height=4, width=50)
-			
-			
 			
 			label1 = tk.Label(top_frame,text="Voltage, V. Use semicolon separation e.g. 1;2;3;4;5;")
 			label2 = tk.Label(top_frame,text="Flow, cm/s. Use semicolon separation e.g. 0.1;0.2;0.3;0.4;0.5;")
@@ -381,7 +349,6 @@ class Swimmy(tk.Frame):
 
 			S2.pack(side="right", fill="y")
 			T2.pack(side="left", fill="y")
-
 
 			S.config(command=T.yview)
 			T.config(yscrollcommand=S.set)
@@ -411,8 +378,6 @@ class Swimmy(tk.Frame):
 			ccc = thr.Timer(.5, checkbeforestart)
 			# ccc.daemon = True
 			ccc.start()
-			# print("Running job_funtion")
-			# print len(thr.enumerate())
 			
 			
 			
@@ -423,8 +388,7 @@ class Swimmy(tk.Frame):
 			with open(temp + "experimentstarted.txt", 'r') as f:
 				if f.readline() =='1':
 					return
-				# LoadLoad()
-				
+				# LoadLoad()		
 				#Bottom part with buttons
 				# O2 check
 				
