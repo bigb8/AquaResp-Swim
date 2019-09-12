@@ -487,12 +487,7 @@ class Swimmy(tk.Frame):
 			
 			job_function()
 			
-			# global fc_tjek,o2_tjek
-			# return fc_tjek*o2_tjek,fc_tjek,o2_tjek
-		
-		
-		
-		# def StartExperiment(crapargument):
+
 		def StartExperiment():
 			print("Initiating experiment")
 			filehandling.SetRun(str(1))
@@ -539,7 +534,6 @@ class Swimmy(tk.Frame):
 			
 			
 			Popen(["python", lib + os.sep +"intermittentflow.py ", str(tf),str(tw),str(tm)])
-			# intermittentflow.Conventional(tf,tw,tm)
 			root.destroy()
 			
 			
@@ -563,7 +557,7 @@ class Swimmy(tk.Frame):
 				fe.write(("%s;%s;%s;%s;") % (self.fishmass.get(),self.fishW.get(),self.fishH.get(),self.fishL.get()))
 
 			print("Data saved")
-			# print Fore.RESET + 	Back.RESET
+
 			
 		
 
@@ -595,10 +589,6 @@ class Swimmy(tk.Frame):
 			fishbox = [self.fishmass,self.fishW,self.fishH,self.fishL]
 			
 
-
-
-			
-			
 			if os.path.isfile(temp + "experiment.txt"): 
 				with open(temp + "experiment.txt","r") as fe:
 					datatemp = fe.readlines()[1]
@@ -614,8 +604,6 @@ class Swimmy(tk.Frame):
 					
 				datatemp = None			
 
-
-		
 			#Respirometer box load
 			if os.path.isfile(temp + "respirometer.txt"): 
 				with open(temp + "respirometer.txt","r") as fe:
@@ -638,8 +626,6 @@ class Swimmy(tk.Frame):
 						ii["bg"] = "snow"
 			
 			print("Respirometer and experiment data loaded")
-			
-			
 			return			
 		
 	
@@ -655,9 +641,7 @@ class Swimmy(tk.Frame):
 	
 		self.main_container  = tk.Frame(self.parent)
 		self.main_container.pack(side="top", fill="both",expand=True)
-		
-		
-		# self.top_frame = tk.Frame(self.main_container, background="green")
+
 		self.top_frame = tk.Frame(self.main_container)
 		self.bottom_frame = tk.Frame(self.main_container, background="yellow")
 		
@@ -667,10 +651,6 @@ class Swimmy(tk.Frame):
 		
 		
 		self.top_left = tk.LabelFrame(self.top_frame, text="Experiment",bg="thistle3")
-		# self.top_left.geometry('{}x{}'.format(350, 200))
-		
-		
-		# self.top_right = tk.Frame(self.top_frame, background="blue")
 		
 		self.top_left.pack(side="left",ipadx=75,fill="both")
 		
@@ -691,18 +671,12 @@ class Swimmy(tk.Frame):
 		
 
 		#Experiment contents
-		
 		self.td = tk.StringVar()
 		self.label = tk.Label( self.top_left, textvariable=self.td,bg="thistle3",fg="darkblue" )
-
 		self.td.set(ctime())
 		self.label.pack(anchor="w")
-		
 		self.expnamelab = tk.Label( self.top_left, text = "Experiment name: " ,bg="thistle3")
 		self.expname = tk.Entry( self.top_left )
-		
-
-	
 		self.temperaturelab = tk.Label( self.top_left, text = "Temperature, Celsius: " ,bg="thistle3")
 		self.temperature = tk.Entry( self.top_left )
 
@@ -734,10 +708,7 @@ class Swimmy(tk.Frame):
 		self.measurelab.pack(anchor="w")
 		self.measure.pack(fill="x")
 	
-		
-	
-	
-	
+
 	
 		#Right side - respirometer
 		self.respvollab = tk.Label( self.frameresp, text = "Respirometer volume, L: " ,bg="LightSteelBlue1")
@@ -759,19 +730,12 @@ class Swimmy(tk.Frame):
 		self.swinsecH.pack(fill="x")
 	
 		#Right side - fish
-
 		self.fishLlab = tk.Label( self.framefish, text = "Fish length, cm: ",bg="DarkSeaGreen1" )
 		self.fishL = tk.Entry( self.framefish)
-		
-		
 		self.fishWlab = tk.Label( self.framefish, text = "Fish width widest, cm: ",bg="DarkSeaGreen1" )
 		self.fishW = tk.Entry( self.framefish)
-
-
-		
 		self.fishHlab = tk.Label( self.framefish, text = "Fish width highest, cm: ",bg="DarkSeaGreen1" )
 		self.fishH = tk.Entry( self.framefish)
-		
 		self.fishmasslab = tk.Label( self.framefish, text = "Fish mass, g: " ,bg="DarkSeaGreen1")
 		self.fishmass = tk.Entry( self.framefish)
 		
@@ -801,13 +765,11 @@ class Swimmy(tk.Frame):
 		self.MotorReadstat = tk.Label(self.bot_left, text ="DAQ for motor input not set",bg="AntiqueWhite1")
 		self.B6 = tk.Button(self.bot_left, text ="Configure DAQ", command = DAQgui,fg="red1")
 		
-		
+		# hmm
 		job_function()
-		
-		
+
 		
 		self.B3.pack(anchor="w",fill="x")
-		# B3.pack()
 		self.O2stat.pack(fill="x",expand=True)
 		
 		self.B6.pack(anchor="w",fill="x")
@@ -818,38 +780,25 @@ class Swimmy(tk.Frame):
 
 		self.B5.pack(anchor="w",fill="x")
 		self.Relaystat.pack(fill="x",expand=True)
-		# B2.pack()
 
 		#Bottom part with buttons
 		B1 = tk.Button(self.bot_rigth, text ="Load information \n Left click for Resp and Exp \n Right click for fish", command = LoadLoad,fg="maroon")
 		B11 = tk.Button(self.bot_rigth, text ="Save information", command = SaveSave,fg="sea green")
 		
-		
-		# B1.bind('<Double-Button-1>', LoadLoadLoad)
 		B1.bind('<Button-3>', LoadLoadLoad)
 		self.Relaystat.bind('<Button-3>',externalhandling.testpump)
 
 		
-		self.B2 = tk.Button(self.bot_rigth, text ="Start Experiment", command = StartExperiment,fg="blue",bg="PeachPuff1")
-		# self.B2 = tk.Button(self.bot_rigth, text ="Start Experiment (2x click)",fg="blue",bg="PeachPuff1")
-		
-
-		# self.B2.bind('<Double-Button-1>', StartExperiment)
-		
-		
+		self.B2 = tk.Button(self.bot_rigth, text ="Start Experiment", command = StartExperiment,fg="blue",bg="PeachPuff1")	
 		B1.pack(side="left",fill="both",expand=True)
 		B11.pack(side="left",fill="both",expand=True)
 		self.B2.pack(side="left",fill="both",expand=True)
-		# self.parent.after(200, )
 		
 
 
 if __name__ == "__main__":
 	root = tk.Tk()
 	Swimmy(root).pack(side="top")
-	# Swimmy(root)
-	# root.updatetime()
-	# root.updatetime()
 	# try:
 	root.mainloop()
 	# except TclError:
