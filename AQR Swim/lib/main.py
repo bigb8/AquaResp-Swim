@@ -534,6 +534,7 @@ class Swimmy(tk.Frame):
 			
 			
 			Popen(["python", lib + os.sep +"intermittentflow.py ", str(tf),str(tw),str(tm)])
+			Popen(["python",  mainpath +os.sep +"lib" + os.sep +"GuiExp.py"])
 			root.destroy()
 			
 			
