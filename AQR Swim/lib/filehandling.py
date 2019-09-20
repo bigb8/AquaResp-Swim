@@ -325,8 +325,6 @@ def MO2Save(timestartmeasurement,in_hours,unixtime, MO2, slope, intercept, r2, p
 			MO2/float(beta)))
 			
 		
-	# with open('C:\AQUARESP\\temp\datacurrent'+ str(chh)+'.txt',"a") as atxt:
-		# atxt.write(str(time)+";"+str(MO2)+";"+str(PO2)+";"+str(RSQ)+";"+str(SLOPE)+";\n")
 def GetsummaryData(ch):
 	
 	mo2 = []
