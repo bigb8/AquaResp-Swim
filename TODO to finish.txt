@@ -1,0 +1,3 @@
+GUI to stop experiment
+Installation and windows types check
+Edits from Heidrikur
