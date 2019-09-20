@@ -97,7 +97,7 @@ def ReadFirestingOld(fn):
 
 def ReadFibox3_1ch(fn):
 	with open(fn,'r') as f:
-		ans =  tail(f)
+		ans =  list(f)[-1]
 	n= -1
 	try:
 		pO2_1 = ans.split(";")[3].split(" ")[-1]
