@@ -175,16 +175,11 @@ def MeasurementPeriod(mainpath):
 	filehandling.updateLastmo2file(0,MO2,rr)
 	filehandling.MO2Save(timestartmeasurement2,in_hours,unixtime, MO2, slope, intercept, rr, p_value, std_err,duration,avgpo2,medianpo2,minpo2,maxpo2, maxpo2-minpo2,beta,rRespFish,in_hours, in_minutes,in_seconds, in_days,MO2wa,animalmass,beta,avgU,avgUC,avgUBL,avgV)
 		
-		#Create JS for data viewer
-		# try:	
-			# AquaPlot.fakeJSdatasource()
-		
-		#Create copy data for  data viewer
-			# Popen(["python",  mainpath +os.sep +"lib" + os.sep +"copytoGD.py"])
-		# print "Finished data handling", duration
-		# except: pass
+
 	filehandling.updateLastmo2file(1,"-","-")
-	
+		
+	try:
+		Popen(["python",  mainpath +os.sep +"lib" + os.sep +"Plotz.py"])
 	
 	# Popen(["python", lib_p + os.sep + "Pump.py","1","0","1"])
 	
