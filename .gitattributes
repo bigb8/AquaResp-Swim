@@ -1,4 +1,1 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
-*.rb linguist-language=Python
+*.py linguist-language=Python
