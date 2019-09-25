@@ -1,21 +1,10 @@
 # Graphing
-import matplotlib.pyplot as plt
+
 import threading as thr
 from subprocess import Popen
-# import matplotlib
-# matplotlib.rc('axes',edgecolor='green')
-# style="red.Horizontal.TProgressbar",
 
-# import ttk
 import os, sys,time
-import matplotlib
-# matplotlib.use('TkAgg')
-
 import numpy as np
-
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg #, NavigationToolbar2TkAgg
-from matplotlib.backend_bases import key_press_handler
-from matplotlib.figure import Figure
 
 if sys.version_info[0] < 3:
     # import Tkinter as Tk
