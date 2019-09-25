@@ -1,3 +1,2 @@
-GUI to stop experiment
-Installation and windows types check
+
 Check O2 reading. Fibox. Firesting.
