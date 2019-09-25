@@ -33,9 +33,6 @@ FlushDLL.FCWInitObject.restype =  ctypes.c_void_p  ## THIS IS PARAMOUNT TO MAKE 
 
 FlushDLL.FCWOpenCleware.argtypes = [ctypes.c_void_p]
 FlushDLL.FCWOpenCleware.restype = ctypes.c_int
-
-
-
 FlushDLL.FCWSetSwitch.argtypes = [ctypes.c_void_p, ctypes.c_int,ctypes.c_int,ctypes.c_int]
 FlushDLL.FCWSetSwitch.restype = ctypes.c_int
 
@@ -47,15 +44,9 @@ f = FlushDLL.FCWInitObject()
 
 # f = ctypes.c_long(f)
 print(f)
-# serialnumber = FlushDLL.FCWGetSerialNumber(f,0)
-# print(f,serialnumber)
-# g = FlushDLL.FCWOpenCleware(ctypes.byref(f))
+
 g = FlushDLL.FCWOpenCleware(f)
 
-# 66463
-# hn = FlushDLL.FCWGetHandle(f,0)
-
-# print hn
 
 
 #1;on/off
