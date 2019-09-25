@@ -9,9 +9,10 @@
 import ctypes
 import os,sys
 import time
-# myp = os.path.dirname(__file__)
+#myp = os.path.dirname(__file__)
 
 myp = os.path.dirname(sys.argv[0]) + os.sep
+print(myp)
 main = myp.split("lib")[0] +os.sep
 temp = main + "temp" +os.sep
 lib = main + "lib" +os.sep
@@ -26,12 +27,26 @@ def reportstatus(s):
 
 
 FlushDLL = ctypes.WinDLL(myp + os.sep + "flush.dll")
-# FlushDLL = ctypes.WinDLL("flush.dll")
+
+
+FlushDLL.FCWInitObject.restype =  ctypes.c_void_p  ## THIS IS PARAMOUNT TO MAKE THE USB-LUMINUS WORK!!
+
+FlushDLL.FCWOpenCleware.argtypes = [ctypes.c_void_p]
+FlushDLL.FCWOpenCleware.restype = ctypes.c_int
+FlushDLL.FCWSetSwitch.argtypes = [ctypes.c_void_p, ctypes.c_int,ctypes.c_int,ctypes.c_int]
+FlushDLL.FCWSetSwitch.restype = ctypes.c_int
+
+FlushDLL.FCWGetSwitch.argtypes = [ctypes.c_void_p, ctypes.c_int,ctypes.c_int]
+FlushDLL.FCWGetSwitch.restype = ctypes.c_int
+
+
 f = FlushDLL.FCWInitObject()
+
+# f = ctypes.c_long(f)
+print(f)
+
 g = FlushDLL.FCWOpenCleware(f)
-# hn = FlushDLL.FCWGetHandle(f,0)
-# serialnumber = FlushDLL.FCWGetSerialNumber(f,0)
-# print hn
+
 
 
 #1;on/off
