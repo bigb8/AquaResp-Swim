@@ -180,9 +180,9 @@ def MeasurementPeriod(mainpath):
 		
 	try:
 		Popen(["python",  mainpath +os.sep +"lib" + os.sep +"Plotz.py"])
-	
-	# Popen(["python", lib_p + os.sep + "Pump.py","1","0","1"])
-	
+
+	except:
+		print("plots failed")
 	
 	
 def run():			
