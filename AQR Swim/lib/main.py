@@ -177,7 +177,8 @@ class Swimmy(tk.Frame):
 			label2 = tk.Label(mid_frame,text="O2: ")
 			label2.pack(side="left")
 
-			for item in ["Flush box 1 channel", "Flush box 4 ch #1", "Flush box 4 ch #2", "Flush box 4 ch #3", "Flush box 4 ch #4", "Loligo LOL-DAQ","MMC USB/PMD 1208LS #ch1"]:
+			# for item in ["Flush box 1 channel", "Flush box 4 ch #1", "Flush box 4 ch #2", "Flush box 4 ch #3", "Flush box 4 ch #4", "Loligo LOL-DAQ","MMC USB/PMD 1208LS #ch1"]:
+			for item in ["CLEW 1"]:
 				listbox.insert(tk.END, item)
 
 			with open(temp + "Relay.txt", "r") as f:	
