@@ -26,9 +26,7 @@ class MyFirstGUI:
 		def updatelabel():
 			
 
-			U,Uc,Ubl ,V = dataacq.returnUfromCal()
-			# U,Uc,Ubl ,V = fakevoltage(1,0.1)
-			
+			U,Uc,Ubl ,V = dataacq.returnUfromCal()		
 			
 			#######################3
 			global datahold1			
