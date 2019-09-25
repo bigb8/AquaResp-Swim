@@ -1,14 +1,24 @@
-import os,sys
+
+#
+import os
+import sys
+import time
+from ctypes import WinDLL,c_long,c_int,byref
+
+##
 import numpy as np
+
+###
 import aquarespdevice
 import aquacalc
+
+#--
 
 myp = os.path.dirname(sys.argv[0]) + os.sep
 main = myp.split("lib")[0] +os.sep
 temp = main + "temp" +os.sep
 lib = main + "lib" +os.sep
 pump_p = lib + os.sep + "pump control" +os.sep
-
 
 
 
@@ -43,27 +53,9 @@ def getO2():
 	
 	return pO2_1,pO2_2,pO2_3,pO2_4,oxtime
 	
-# getO2()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-import os,time
-from ctypes import WinDLL,c_long,c_int,byref
-
-myp = os.path.realpath(__file__).split("aquaread.")[0]
-temp = myp.split("lib")[0] + os.sep + "temp" + os.sep
 
 
 def returnvoltage():
@@ -167,12 +159,9 @@ def MMC1208Read(bn,ch,ran):
 			100:1}
 	
 	
-	# with open("C:\AQUARESP\Settings\OU_DLL.txt","r") as f:
-		# getdllstr = f.readlines()
-	# dllstr = myp + "CBW32.dll"
-	# dllstr = "C:\Program Files (x86)\Measurement Computing\DAQ\cbw32.dll"
-	dllstr = lib + "cbw64.dll"
-	# print dllstr
+
+	dllstr = lib + "1208.dll"
+
 	USB1208dll = WinDLL(dllstr)
 	# USB1208dll.cbFlashLED(0)
 
@@ -191,15 +180,4 @@ def MMC1208Read(bn,ch,ran):
 	
 	# print vread,Va,10*(Va/4096.0)
 	return Va,vread	
-	
-	
-
-	
-	
-	
-# for i in range(0,150):
-	# time.sleep(.01)
-	# returnUfromCal()
-	
-	
 	
