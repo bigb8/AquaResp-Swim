@@ -28,8 +28,6 @@ def getO2():
 		r = f.readline()
 		
 	r = r.split(";")
-		
-	
 	sensor = r[1]
 	sensorn = int(r[0])
 	# print sensor, sensorn
