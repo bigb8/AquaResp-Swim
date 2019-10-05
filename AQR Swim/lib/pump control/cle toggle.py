@@ -25,8 +25,9 @@ def reportstatus(s):
 		
 	
 
-
-FlushDLL = ctypes.WinDLL(myp + os.sep + "flush.dll")
+# print(myp + os.sep + "flush.dll")
+# FlushDLL = ctypes.WinDLL(myp + os.sep + "flush.dll")
+FlushDLL = ctypes.WinDLL(myp + "flush.dll")
 
 
 FlushDLL.FCWInitObject.restype =  ctypes.c_void_p  ## THIS IS PARAMOUNT TO MAKE THE USB-LUMINUS WORK!!

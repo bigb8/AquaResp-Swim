@@ -1,1 +1,1 @@
-0;Flush box 1 channel
+0;CLEW 1
