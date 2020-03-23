@@ -1,0 +1,18 @@
+[1106/014538.341:ERROR:process_info.cc(359)] UncheckedAllocate
+[1120/094357.613:ERROR:process_info.cc(359)] UncheckedAllocate
+[1120/094409.722:ERROR:process_info.cc(359)] UncheckedAllocate
+[1120/094410.085:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: The specified information record length does not match the length required for the specified information class. (0xc0000004)
+[1120/094520.844:ERROR:process_info.cc(359)] UncheckedAllocate
+[1120/094520.890:ERROR:process_info.cc(359)] UncheckedAllocate
+[1120/094521.003:ERROR:process_info.cc(359)] UncheckedAllocate
+[1120/094522.055:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: The specified information record length does not match the length required for the specified information class. (0xc0000004)
+[1122/095412.363:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: The specified information record length does not match the length required for the specified information class. (0xc0000004)
+[1125/042851.764:ERROR:process_info.cc(359)] UncheckedAllocate
+[1129/075539.982:ERROR:process_info.cc(359)] UncheckedAllocate
+[1204/085635.579:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\heidr\AppData\Local\Google\Chrome\User Data\Crashpad\reports\63e6f2f5-9279-4091-b950-2e31072b5f78.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[1204/121634.648:ERROR:process_info.cc(359)] UncheckedAllocate
+[1204/121945.735:ERROR:process_info.cc(359)] UncheckedAllocate
+[1204/123056.826:ERROR:process_info.cc(359)] UncheckedAllocate
+[1208/092752.601:ERROR:process_info.cc(359)] UncheckedAllocate
+[1226/171440.146:ERROR:process_info.cc(359)] UncheckedAllocate
+[1226/174043.397:ERROR:process_info.cc(359)] UncheckedAllocate

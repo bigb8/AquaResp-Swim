@@ -1,0 +1,17 @@
+AQUARESP 3 - Swim version  - Data file 
+--------------------------------------------------------------------------------------------------------------------------------
+Experiment start, UNIX time: 1572622073
+Flush time ,s: 540
+Wait time, s: 60
+Measurement time, s: 6000
+Mass of fish, kg: 0.602
+Fish length - width - heigth, cm: 40;4.6;7.6;
+Volume respirometer, L: 32
+Real volume (vresp - vfish) (neutrally bouyant), L: 31.398
+Salinity: 35
+Temperature: 12
+
+ Timestamp is beginning of measurement period 
+-.-.-.-.-.-.-.-.------------------------------------------------------
+Clock TIME;TIME HOURS;TIME UNIX;MO2 mg/h/kg;MO2 mg/h;SLOPE;Intercept;R^2;P;Std Err; Measurement duration seconds;avg po2;median po2; minimum po2; max po2;delta po2;oxygen solubility;ratio vreal fish;total experiment duration hours;minutes;seconds;days;Animal mass;Average swimspeed not corrrected for solidblocking cm/s;Average swimspeed cm/s;Average swimspeed BL/s;Average voltage;Vh2o L/kg/h;
+2019-11-01 15:37:54;1.833611111111111;1572628673;28.182829175356474;16.9660631635646;-0.001722443879585565;102.71231571094036;0.9887520845526384;0.0;0.0013841398785650596;6000;97.54702707304615;97.435;92.222;103.502;11.280000000000001;8.714280054667721;52.15614617940199;1.833611111111111;110.01666666666667;6601;0.07640046296296296;0.602;16.9660631635646;16.135670570632815;18.241024268301697;0.45602560670754244;-0.44677734375;3.2340972517013165;

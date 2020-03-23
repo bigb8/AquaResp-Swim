@@ -1,0 +1,2 @@
+Experiment name;Temperature;Salinity;Flushing time;Wait time;Measurement time;
+SWR16_1.5PPT_15C;15;1.5;600;30;870;

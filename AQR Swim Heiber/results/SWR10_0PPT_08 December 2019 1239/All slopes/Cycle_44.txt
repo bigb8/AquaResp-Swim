@@ -1,0 +1,2 @@
+Time;Seconds from start for linreg;Unix Time;ch1 po2;Uc;Ubl;Vc;
+06:34:25;-622.0;1575873887;90.683;21.337115652354562;0.6407542237944314;-0.5126953125;

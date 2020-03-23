@@ -1,0 +1,2 @@
+Mass;Fish Width;Fish Height;Fish length;
+782;4.1;7.2;35.1;
